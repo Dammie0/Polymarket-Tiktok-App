@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-degen-green: #00ff41;
+  --color-degen-pink: #ff00ff;
+  --color-degen-blue: #00ffff;
+  --color-degen-black: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-degen-black text-white overflow-hidden;
+    font-family: var(--font-sans);
+  }
+}
+
+.neon-glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.7), 0 0 20px rgba(0, 255, 65, 0.5);
+}
+
+.neon-glow-pink {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.glass-panel {
+  @apply bg-black/40 backdrop-blur-xl border border-white/10;
+}
+
